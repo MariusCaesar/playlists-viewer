@@ -11,8 +11,6 @@ import { CollapsibleComponent } from './collapsible/collapsible.component';
 import { BannerComponent } from './banner/banner.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { SearchPipe } from './pipes/search.pipe';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -36,7 +34,8 @@ import { MatInputModule } from '@angular/material/input';
     TileComponent,
     SpinnerComponent,
     BannerComponent,
-    CollapsibleComponent
+    CollapsibleComponent,
+    SearchPipe
   ]
 })
 export class SharedModule { }

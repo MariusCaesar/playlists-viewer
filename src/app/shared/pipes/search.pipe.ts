@@ -1,3 +1,4 @@
+import { Playlist } from './../../playlist/models/Playlist';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
@@ -5,11 +6,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class SearchPipe implements PipeTransform {
 
-  transform(value: string, ...args: unknown[]): unknown {
-    if (value === undefined) { return args; }
+  transform(values: Playlist[], args: string): unknown {
+    if (!args.length) { return values; }
 
-    return args.filter((each: string) => {
-      return each.toLowerCase().includes(value.toLowerCase());
+    return values.filter((playlist) => {
+      return playlist.name.toLocaleLowerCase().includes(args.toLowerCase());
     });
 
   }

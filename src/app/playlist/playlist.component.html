@@ -11,14 +11,14 @@
     <form class="example-form">
       <mat-form-field class="example-full-width">
         <mat-label>Search favourite playlist</mat-label>
-        <input matInput placeholder="Todays hits" [value]="term" [(ngModel)]="term" contenteditable="true">
+        <input matInput placeholder="Todays hits" [value]="term" [(ngModel)]="term" contenteditable="true" name="searchTerm">
       </mat-form-field>
     </form>
   </section>
 </app-collapsible>
 <ng-container *ngIf="playlists.length; else loadingTemplate">
   <section class="playlist-container" [@listAnimation]="playlists.length">
-    <app-tile class="playlist-item" *ngFor="let playlist of playlists" [img]="playlist.artwork" [link]="playlist.url">
+    <app-tile class="playlist-item" *ngFor="let playlist of playlists | search:term" [img]="playlist.artwork" [link]="playlist.url">
       <div class="title">{{ playlist.name }}</div>
       <div class="subtitle">{{ playlist.curator_name }}</div>
     </app-tile>
