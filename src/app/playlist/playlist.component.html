@@ -1,3 +1,15 @@
-<section class="playlist-container">
-    <app-tile class="playlist-item" *ngFor="let item of test" ></app-tile>
-</section>
+<ng-container *ngIf="playlists.length; else loadingTemplate" >
+    <section class="playlist-container">
+        <app-tile class="playlist-item" *ngFor="let playlist of playlists" [img]="playlist.artwork">
+            <div class="title">{{ playlist.name }}</div>
+            <div class="subtitle">{{ playlist.curator_name }}</div>
+        </app-tile>
+    </section>
+</ng-container>
+<ng-template #loadingTemplate>
+    <section style="display: flex; justify-content: space-around;margin-top: 1em;" >
+        <app-spinner></app-spinner>
+    </section>
+</ng-template>
+
+

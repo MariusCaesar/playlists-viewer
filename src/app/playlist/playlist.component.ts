@@ -8,16 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./playlist.component.scss']
 })
 export class PlaylistComponent implements OnInit {
-
-  test = [1, 2, 3, 4, 5, 6, 7];
-  playlists: Playlist[];
+  playlists: Playlist[] = [];
+  loading = false;
 
   constructor(private service: PlaylistService) { }
 
   ngOnInit(): void {
+    this.loading = true;
     this.service.getPlaylistData().subscribe(playlists => {
-      console.log({ playlists });
         // this.playlists = playlists;
+        this.loading = false;
     });
   }
 

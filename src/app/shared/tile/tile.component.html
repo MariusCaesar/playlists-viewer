@@ -1,12 +1,14 @@
 <mat-card color="primary">
     <mat-card-header>
         <mat-card-title>
-            <ng-content select=".tile-title"></ng-content>
+            <ng-content select=".title"></ng-content>
         </mat-card-title>
-        <mat-card-subtitle>Subtitle</mat-card-subtitle>
+        <mat-card-subtitle>
+            <ng-content select=".subtitle"></ng-content>
+        </mat-card-subtitle>
     </mat-card-header>
-    <img matCardImage src="Card wide image source">
+    <img matCardImage src="{{ img }}">
     <mat-card-content>
-        <ng-content select=".tile-main-content"></ng-content>
+        <ng-content select=".main-content"></ng-content>
     </mat-card-content>
 </mat-card>

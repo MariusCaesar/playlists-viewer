@@ -5,18 +5,23 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { TileComponent } from './tile/tile.component';
 import { MatCardModule } from '@angular/material/card';
+import { SpinnerComponent } from './spinner/spinner.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 
 @NgModule({
-  declarations: [NavComponent, TileComponent],
+  declarations: [NavComponent, TileComponent, SpinnerComponent],
   imports: [
     CommonModule,
     MatToolbarModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     NavComponent,
-    TileComponent
+    TileComponent,
+    SpinnerComponent
   ]
 })
 export class SharedModule { }
