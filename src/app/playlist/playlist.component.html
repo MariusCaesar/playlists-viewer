@@ -1,3 +1,12 @@
+<app-banner [loading]="loading">
+  <div class="banner-left">
+    <h3>Featured playlist</h3>
+    <p>Explore all playlists</p>
+  </div>
+  <div class="banner-right">
+    <mat-icon class="mat-18">search</mat-icon>
+  </div>
+</app-banner>
 <ng-container *ngIf="playlists.length; else loadingTemplate">
   <section class="playlist-container" [@listAnimation]="playlists.length">
     <app-tile class="playlist-item" *ngFor="let playlist of playlists" [img]="playlist.artwork" [link]="playlist.url">

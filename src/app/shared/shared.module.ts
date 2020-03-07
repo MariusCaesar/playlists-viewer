@@ -9,21 +9,28 @@ import { SpinnerComponent } from './spinner/spinner.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { CollapsibleComponent } from './collapsible/collapsible.component';
 import { BannerComponent } from './banner/banner.component';
-
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
-  declarations: [NavComponent, TileComponent, SpinnerComponent, CollapsibleComponent, BannerComponent],
+  declarations: [
+    NavComponent,
+    TileComponent,
+    SpinnerComponent,
+    CollapsibleComponent,
+    BannerComponent],
   imports: [
     CommonModule,
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatProgressBarModule
   ],
   exports: [
     NavComponent,
     TileComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    BannerComponent
   ]
 })
 export class SharedModule { }

@@ -6,6 +6,11 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
+    redirectTo: '/playlist',
+    pathMatch: 'full'
+  },
+  {
+    path: 'playlist',
     component: PlaylistComponent
   }
 ];

@@ -1,1 +1,16 @@
-<p>banner works!</p>
+<header class="banner" role="banner">
+
+    <div class="info">
+        <div class="info-content">
+            <ng-content select=".banner-left"></ng-content>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="buttons">
+        <ng-content *ngIf="!loading"  select=".banner-right"></ng-content>
+    </div>
+
+</header>
+<mat-progress-bar *ngIf="loading" mode="indeterminate" color="primary"></mat-progress-bar>

@@ -1,0 +1,24 @@
+.banner {
+    display: flex;
+    background: #a081d7;
+    position: relative;
+    z-index: 1;
+    font-weight: bold;
+
+
+    .info {
+        margin: .8em 1em;
+    }
+
+    .spacer {
+        flex: 1 1 auto;
+    }
+
+    .buttons {
+        display: flex;   
+        align-items: center;
+    }
+
+
+
+}
