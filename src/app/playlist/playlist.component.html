@@ -3,9 +3,19 @@
     <h3>Featured playlist</h3>
   </div>
   <div class="banner-right">
-    <mat-icon class="mat-18">search</mat-icon>
+    <mat-icon class="mat-18" (click)="searching = !searching">search</mat-icon>
   </div>
 </app-banner>
+<app-collapsible [trigger]="searching">
+  <section style="padding-left: 15px; padding-top: 10px;background: #b395e9;">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Search favourite playlist</mat-label>
+        <input matInput placeholder="Todays hits" [value]="term" [(ngModel)]="term" contenteditable="true">
+      </mat-form-field>
+    </form>
+  </section>
+</app-collapsible>
 <ng-container *ngIf="playlists.length; else loadingTemplate">
   <section class="playlist-container" [@listAnimation]="playlists.length">
     <app-tile class="playlist-item" *ngFor="let playlist of playlists" [img]="playlist.artwork" [link]="playlist.url">

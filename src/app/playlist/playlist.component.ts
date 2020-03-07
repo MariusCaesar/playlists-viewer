@@ -26,6 +26,8 @@ import { trigger, transition, query, style, stagger, animate } from '@angular/an
 export class PlaylistComponent implements OnInit {
   playlists: Playlist[] = [];
   loading = false;
+  searching = false;
+  term = '';
 
   constructor(private service: PlaylistService) { }
 

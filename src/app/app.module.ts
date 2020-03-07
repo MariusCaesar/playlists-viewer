@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PlaylistComponent } from './playlist/playlist.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,10 @@ import { MatIconModule } from '@angular/material/icon';
     BrowserAnimationsModule,
     HttpClientModule,
     MatIconModule,
-    SharedModule
+    SharedModule,
+    MatFormFieldModule,
+    MatInputModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

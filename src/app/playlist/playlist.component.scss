@@ -1,8 +1,9 @@
 .playlist-container {
+    margin-top: 1em;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;;
+    justify-content: space-between;
 
     .playlist-item {
         flex: 1 0 21%;
@@ -17,7 +18,7 @@ section.loading {
 }
 
 mat-icon {
-    font-size: 3em;
+    font-size: 2em;
     margin-right: 1em;
     cursor: pointer;
 }

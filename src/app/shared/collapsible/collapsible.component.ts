@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
@@ -14,7 +14,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
             opacity: '0'
           })),
           state('open', style({
-            height: '100px',
+            height: '50px',
             opacity: '1'
           })),
           transition('open <=> closed', animate('250ms cubic-bezier(0, 0, 0.2, 1)')),

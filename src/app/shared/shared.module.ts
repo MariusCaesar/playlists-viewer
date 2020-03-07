@@ -10,6 +10,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { CollapsibleComponent } from './collapsible/collapsible.component';
 import { BannerComponent } from './banner/banner.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { SearchPipe } from './pipes/search.pipe';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -17,20 +20,23 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     TileComponent,
     SpinnerComponent,
     CollapsibleComponent,
-    BannerComponent],
+    BannerComponent,
+    SearchPipe
+  ],
   imports: [
     CommonModule,
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
     MatProgressSpinnerModule,
-    MatProgressBarModule
+    MatProgressBarModule,
   ],
   exports: [
     NavComponent,
     TileComponent,
     SpinnerComponent,
-    BannerComponent
+    BannerComponent,
+    CollapsibleComponent
   ]
 })
 export class SharedModule { }
