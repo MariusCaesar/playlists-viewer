@@ -1,5 +1,10 @@
 <mat-toolbar color="primary">
-    <span>
-        <ng-content select=".title"></ng-content>
-    </span>
+    <mat-toolbar-row>
+        <span>
+            <ng-content select=".title"></ng-content>
+        </span>
+        <span class="spacer"></span>
+        <mat-icon class="mat-18">search</mat-icon>
+    </mat-toolbar-row>
+
 </mat-toolbar>
