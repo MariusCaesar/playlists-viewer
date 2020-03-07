@@ -4,10 +4,11 @@
     position: relative;
     z-index: 1;
     font-weight: bold;
+    align-items: center;
 
 
     .info {
-        margin: .8em 1em;
+        margin: 0em 1em -1em;
     }
 
     .spacer {
