@@ -1,7 +1,7 @@
 import { Playlist } from './Playlist';
 
-export interface FeaturedPlaylist {
-    featuredPlaylist: {
+export interface FeaturedPlaylists {
+    featuredPlaylists: {
         name: string;
         content: Playlist[];
     };
