@@ -8,10 +8,11 @@ import { MatCardModule } from '@angular/material/card';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { CollapsibleComponent } from './collapsible/collapsible.component';
+import { BannerComponent } from './banner/banner.component';
 
 
 @NgModule({
-  declarations: [NavComponent, TileComponent, SpinnerComponent, CollapsibleComponent],
+  declarations: [NavComponent, TileComponent, SpinnerComponent, CollapsibleComponent, BannerComponent],
   imports: [
     CommonModule,
     MatToolbarModule,
