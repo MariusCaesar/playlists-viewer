@@ -1,0 +1,8 @@
+mat-card {
+    background: #c2185a;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    &:hover {
+        transform: scale(1.05);
+    }
+}

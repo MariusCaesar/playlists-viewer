@@ -16,7 +16,7 @@ export class PlaylistComponent implements OnInit {
   ngOnInit(): void {
     this.loading = true;
     this.service.getPlaylistData().subscribe(playlists => {
-        // this.playlists = playlists;
+        this.playlists = playlists;
         this.loading = false;
     });
   }
