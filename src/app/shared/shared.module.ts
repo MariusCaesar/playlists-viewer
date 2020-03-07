@@ -7,10 +7,11 @@ import { TileComponent } from './tile/tile.component';
 import { MatCardModule } from '@angular/material/card';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { CollapsibleComponent } from './collapsible/collapsible.component';
 
 
 @NgModule({
-  declarations: [NavComponent, TileComponent, SpinnerComponent],
+  declarations: [NavComponent, TileComponent, SpinnerComponent, CollapsibleComponent],
   imports: [
     CommonModule,
     MatToolbarModule,
