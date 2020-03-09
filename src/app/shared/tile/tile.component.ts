@@ -16,7 +16,7 @@ export class TileComponent implements OnInit {
   }
 
   goToPage(): void {
-    window.open(this.link);
+    window.open(this.link, '_blank');
   }
 
 }
